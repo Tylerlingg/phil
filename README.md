@@ -7,36 +7,7 @@ Abstract:
 
 phil is a fully on-chain NFT project inspired by Avastars and people i've learned from and respect within the crypto space. It aims to achieve full decentralization and on-chain storage using ethscriptions on ethereum Classic. phil’s artwork is made up of 9 distinct trait SVG layers created by using different algorthims, which are then compressed, stored, and referenced on-chain.
 
-    Examples of Algorithms used 
-        // Adjust complexity of SVG generation based on index
-    switch (index) {
-      case 0:
-        svgContent = generateLSystemFractal(382, 382, pathData);
-        break;
-      case 1:
-        svgContent = generateJuliaSetFractal(382, 382, pathData);
-        break;
-      case 2:
-        svgContent = generateBlackAndWhiteVoronoiPattern(382, 382, pathData);
-        break;
-      case 3:
-        svgContent = generateGeneticAlgorithmSvg(382, 382);
-        break;
-      case 4:
-        svgContent = generateGANPattern(382, 382, Math.floor(Math.random() * 10000));
-        break;
-      case 5:
-        svgContent = generateBlackAndWhiteVoronoiPattern(382, 382, pathData);
-        break;
-      case 6:
-        svgContent = generateJuliaSetPattern(382, 382, pathData);
-        break;
-      case 7:
-        svgContent = generateJuliaSetFractal(382, 382, Math.floor(Math.random() * 10000));
-        break;
-      default:
-        console.warn(`Unknown index: ${index}`);
-    }
+	Examples of Algorithms used will be created in a different file titled 'GitchArt.js'. 
 
 phil currently has 9 different layers:
 
@@ -72,7 +43,8 @@ Developer Overview:
 The goal is to ensure that all data for the NFTs is stored entirely on-chain, then using ethscriptions on ethereum Classic, while users are able to keep complete anonimity when claiming their own phil. 
 
 	1.	Compression and Storage:
-	•	SVG to Hexadecimal Conversion:
+
+	SVG to Hexadecimal Conversion
 	•	Start with SVGs.
 	•	Compress using SVGO.
 	•	Convert to base64 strings.
@@ -80,17 +52,25 @@ The goal is to ensure that all data for the NFTs is stored entirely on-chain, th
 	•	Convert the compressed string to hexadecimal.
 	•	Each final hexadecimal string is stored as an ethscription.
      *each hash can be stored within the Smart Contract as a .json file converted into a hexadecmial which the front end could then reference so it's not pulling from a computer or centralized server. I'm not sure if it would be possible to store all the hashes from the .json file in one Smart Contract, but if not, it's always possible to seperate the cetegories and deploy multiple Smart Contracts for the frontend to reference. 
+
 	2.	Data Flow:
+
 	•	Each layer (trait) is stored on-chain via ethscriptions.
 	•	The transaction hashes (ethscription pointers) are stored in a .json file which are then converted into hexadecimal format and stored in the Smart Contract.
 	•	On the frontend, traits are decompressed and combined to create the final phil image.
+
 	3.	Minting Process:
-	•	When a user mints, the smart contract references 9 Ethscription pointers (one for each trait).
+
+	•	When a user mints, the smart contract references 9 ethscription pointers (one for each trait).
 	•	The smart contract ensures no two phils are generated with the same trait combination by tracking used combinations and preventing duplicates.
+
 	4.	Token Delivery:
+
 	•	The NFT is minted to the newly generated vanity address.
 	•	Simultaneously, $phil tokens are sent to the same address.
+
 	5.	Minting Details:
+
 	•	Minting will be open for 369 days, though the total quantity is still to be determined.
 	•	Feedback on whether a maximum supply should be set is welcome.
 
