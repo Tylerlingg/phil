@@ -3,6 +3,8 @@ phil is a work in progress Generative Art Project on ethereum Classic based on t
 
 I'm open-sourcing it because i've got lost in the sauce of life as well as this project and since i've never really been a developer or coder i figured this would be a good try at my first legit repo.
 
+In order to achieve the functionality thus far I've relied 100% on ChatGPT by OpenAI. Like I stated before, this is my first legit try at a repo, and I also didn't know what Computer Science was 3 years ago. 
+
 Abstract: 
 
 phil is a fully on-chain NFT project inspired by Avastars and people i've learned from and respect within the crypto space. It aims to achieve full decentralization and on-chain storage using ethscriptions on ethereum Classic. phil’s artwork is made up of 9 distinct trait SVG layers created by using different algorthims, which are then compressed, stored, and referenced on-chain.
