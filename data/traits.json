@@ -1,5 +1,6 @@
-These are the hashes of each individual trait uploaded to the Mordor Testnet as an Ethscription. 
-Each one remaining under the 92 KB limit.
+# -----------------------------------------
+# This script will compress each SVG into Hexadecimal form which in turn will be uploaded as an Ethscription.
+# -----------------------------------------
 
 {
     "commonNeck4.svg.hex": "0x2222663a9c2d39581a69d4512d1bc6747550fc9eb09e2a2b04c69027a183d421",
